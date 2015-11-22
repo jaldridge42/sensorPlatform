@@ -1,0 +1,18 @@
+
+State Machine - |sensorl_interface|sensors_intf:inst|temperature_sensor_serial_interface:temp_interface_0|write_read_state
+Name write_read_state.STOP write_read_state.SEND_DATA write_read_state.SEND_REG_ADRS write_read_state.GET_DATA write_read_state.SEND_SLAVE_ADRS write_read_state.IDLE 
+write_read_state.IDLE 0 0 0 0 0 0 
+write_read_state.SEND_SLAVE_ADRS 0 0 0 0 1 1 
+write_read_state.GET_DATA 0 0 0 1 0 1 
+write_read_state.SEND_REG_ADRS 0 0 1 0 0 1 
+write_read_state.SEND_DATA 0 1 0 0 0 1 
+write_read_state.STOP 1 0 0 0 0 1 
+
+State Machine - |sensorl_interface|sensors_intf:inst|sensors_intf_nios2_qsys_0:nios2_qsys_0|sensors_intf_nios2_qsys_0_nios2_oci:the_sensors_intf_nios2_qsys_0_nios2_oci|sensors_intf_nios2_qsys_0_jtag_debug_module_wrapper:the_sensors_intf_nios2_qsys_0_jtag_debug_module_wrapper|sensors_intf_nios2_qsys_0_jtag_debug_module_tck:the_sensors_intf_nios2_qsys_0_jtag_debug_module_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

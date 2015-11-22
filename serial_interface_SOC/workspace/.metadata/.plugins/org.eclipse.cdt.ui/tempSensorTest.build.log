@@ -1,0 +1,9 @@
+20:20:47 **** Incremental Build of configuration Nios II for project tempSensorTest ****
+make all 
+Info: Building ../tempSensorTest_bsp/
+C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../tempSensorTest_bsp/
+[BSP build complete]
+[tempSensorTest build complete]
+
+20:20:48 Build Finished (took 565ms)
+

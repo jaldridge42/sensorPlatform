@@ -1,0 +1,22 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst sensors_intf.nios2_qsys_0 -pg 1 -lvl 2 -y 110
+preplace inst sensors_intf.temp_interface_0 -pg 1 -lvl 3 -y 530
+preplace inst sensors_intf.sysid_qsys_0 -pg 1 -lvl 3 -y 450
+preplace inst sensors_intf.jtag_uart -pg 1 -lvl 3 -y 150
+preplace inst sensors_intf -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst sensors_intf.spi_ADC -pg 1 -lvl 3 -y 250
+preplace inst sensors_intf.clk_50M -pg 1 -lvl 1 -y 310
+preplace inst sensors_intf.pio_GO -pg 1 -lvl 3 -y 30
+preplace inst sensors_intf.onchip_mem -pg 1 -lvl 3 -y 370
+preplace netloc EXPORT<net_container>sensors_intf</net_container>(SLAVE)clk_50M.clk_in,(SLAVE)sensors_intf.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>sensors_intf</net_container>(SLAVE)spi_ADC.external,(SLAVE)sensors_intf.spi_adc_external) 1 0 3 NJ 280 NJ 280 NJ
+preplace netloc INTERCONNECT<net_container>sensors_intf</net_container>(SLAVE)spi_ADC.spi_control_port,(SLAVE)pio_GO.s1,(SLAVE)temp_interface_0.avalon_slave_0,(SLAVE)nios2_qsys_0.jtag_debug_module,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)sysid_qsys_0.control_slave,(MASTER)nios2_qsys_0.instruction_master,(MASTER)nios2_qsys_0.data_master,(SLAVE)onchip_mem.s1) 1 1 2 360 300 610
+preplace netloc EXPORT<net_container>sensors_intf</net_container>(SLAVE)pio_GO.external_connection,(SLAVE)sensors_intf.pio_go_external) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>sensors_intf</net_container>(MASTER)clk_50M.clk,(SLAVE)jtag_uart.clk,(SLAVE)nios2_qsys_0.clk,(SLAVE)temp_interface_0.clock,(SLAVE)sysid_qsys_0.clk,(SLAVE)spi_ADC.clk,(SLAVE)onchip_mem.clk1,(SLAVE)pio_GO.clk) 1 1 2 320 320 630
+preplace netloc FAN_OUT<net_container>sensors_intf</net_container>(SLAVE)pio_GO.irq,(MASTER)nios2_qsys_0.d_irq,(SLAVE)spi_ADC.irq,(SLAVE)jtag_uart.irq) 1 2 1 670
+preplace netloc EXPORT<net_container>sensors_intf</net_container>(SLAVE)clk_50M.clk_in_reset,(SLAVE)sensors_intf.reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>sensors_intf</net_container>(SLAVE)pio_GO.reset,(SLAVE)spi_ADC.reset,(MASTER)clk_50M.clk_reset,(MASTER)nios2_qsys_0.jtag_debug_module_reset,(SLAVE)sysid_qsys_0.reset,(SLAVE)jtag_uart.reset,(SLAVE)nios2_qsys_0.reset_n,(SLAVE)temp_interface_0.reset_sig,(SLAVE)onchip_mem.reset1) 1 1 2 340 600 650
+preplace netloc EXPORT<net_container>sensors_intf</net_container>(SLAVE)sensors_intf.tempinterface,(SLAVE)temp_interface_0.export_sig) 1 0 3 NJ 580 NJ 580 NJ
+levelinfo -pg 1 0 110 880
+levelinfo -hier sensors_intf 120 150 390 720 870

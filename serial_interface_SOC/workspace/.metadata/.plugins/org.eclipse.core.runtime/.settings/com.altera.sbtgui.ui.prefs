@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=C\:\\Courses\\serial_interface_SOC\\software\\tempSensorTest
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\Courses\\serial_interface_SOC\\sensors_intf.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\Courses\\serial_interface_SOC\\software\\tempSensorTest_bsp

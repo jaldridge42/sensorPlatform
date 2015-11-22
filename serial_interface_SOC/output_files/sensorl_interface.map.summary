@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Oct 14 20:18:47 2015
+Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
+Revision Name : sensorl_interface
+Top-level Entity Name : sensorl_interface
+Family : Cyclone IV E
+Total logic elements : 3,664
+    Total combinational functions : 3,010
+    Dedicated logic registers : 2,204
+Total registers : 2204
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 426,368
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 0
